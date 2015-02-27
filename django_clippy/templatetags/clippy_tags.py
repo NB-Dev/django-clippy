@@ -9,6 +9,8 @@ from django.utils.safestring import mark_safe
 
 register = template.Library()
 
+last_clippy_id = 0
+
 @register.filter
 def clippy(text):
     """
@@ -18,4 +20,4 @@ def clippy(text):
         text => text to generate the html code from
 
     """
-    return mark_safe(render_to_string('clippy.html', {'text': text, 'MEDIA_URL': settings.MEDIA_URL}).rstrip())
+    return mark_safe(render_to_string('clippy.html', {'text': text}).rstrip())

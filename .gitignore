@@ -8,4 +8,4 @@
 *.un~
 build
 dist
-paython.egg-info
+*.egg-info

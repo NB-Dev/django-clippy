@@ -22,7 +22,7 @@ setup(
     keywords = "django clippy clipboard",
     url = "https://github.com/NB-Dev/django-clippy",
     include_package_data = True,
-    packages=find_packages(),
+    packages=find_packages(exclude=('example',)),
     exclude=['*.tests', 'example'],
     install_requires=['Django >=1.7',],
     long_description=read('README.rst'),
