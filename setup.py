@@ -8,9 +8,13 @@ from setuptools import setup, find_packages
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
+# allow setup.py to be run from any path
+os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+
+
 setup(
     name = "django-clippy",
-    version = "0.0.1",
+    version = "0.0.2",
     author = "Igor Guerrero",
     author_email = "igfgt1@gmail.com",
     description = ("A copy to clipboard widget for Django."),
@@ -19,10 +23,8 @@ setup(
     url = "https://github.com/NB-Dev/django-clippy",
     include_package_data = True,
     packages=find_packages(),
-    package_data = {
-        # If any package contains *.txt or *.rst files, include them:
-        '*': ['*'],
-    },
+    exclude=['*.tests', 'example'],
+    install_requires=['Django >=1.7',],
     long_description=read('README.rst'),
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",

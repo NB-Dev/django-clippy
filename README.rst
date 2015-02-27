@@ -17,3 +17,4 @@ Use this code to integrate it::
     {{ "hello"|clippy }}
 
 Now the user just have to click the button to copy the text to the clipboard.
+
