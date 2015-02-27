@@ -9,14 +9,14 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name = "clippy",
+    name = "django-clippy",
     version = "0.0.1",
     author = "Igor Guerrero",
     author_email = "igfgt1@gmail.com",
     description = ("A copy to clipboard widget for Django."),
     license = "MIT",
     keywords = "django clippy clipboard",
-    url = "https://github.com/igorgue/django-clippy",
+    url = "https://github.com/NB-Dev/django-clippy",
     include_package_data = True,
     packages=find_packages(),
     package_data = {
